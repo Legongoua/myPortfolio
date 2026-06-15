@@ -6,7 +6,7 @@ const NavItems = () => {
     <ul className="nav-ul">
       {navLinks.map(({ id, name, href }) => (
         <li key={id} className="nav-li">
-          <a href={href} className="nav-li_a">
+          <a href={href} className="nav-li_a" onClick={() => {}}>
             {name}
           </a>
         </li>
@@ -41,16 +41,16 @@ const Navbar = () => {
               className="w-6 h-6"
             />
           </button>
-          <nav>
+          <nav className="hidden sm:flex">
             <NavItems />
           </nav>
         </div>
       </div>
-      {/* <div className={`nav-sidebar ${isOpen ? "max-h-screen" : "max-h-0"}`}>
+      <div className={`nav-sidebar ${isOpen ? "max-h-screen" : "max-h-0"}`}>
         <nav className="p-5">
             <NavItems />
         </nav>
-      </div> */}
+      </div>
     </header>
   );
 };

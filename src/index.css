@@ -61,8 +61,12 @@ body {
 
   .head-text {
   @apply sm:text-4xl text-3xl font-semibold;
-  @apply bg-gradient-to-r from-[#BEC1CF] from-60% via-[#D5D8EA] via-60% to-[#D5D8EA] to-100% bg-clip-text text-transparent;
+  @apply bg-linear-to-r from-[#BEC1CF] from-60% via-[#D5D8EA] via-60% to-[#D5D8EA] to-100% bg-clip-text text-transparent;
 }
+
+.text-gray_gradient {
+    @apply bg-gradient-to-r from-[#BEC1CF] from-60% via-[#D5D8EA] via-60% to-[#D5D8EA] to-100% bg-clip-text text-transparent;
+  }
 
   .btn {
     @apply flex gap-4 items-center justify-center cursor-pointer p-3 rounded-md transition-all active:scale-95 text-white mx-auto;
@@ -78,7 +82,7 @@ body {
   }
 
   .hero_tag {
-    @apply text-center xl:text-6xl md:text-5xl sm:text-4xl text-3xl font-black !leading-normal;
+    @apply text-center xl:text-6xl md:text-5xl sm:text-4xl text-3xl font-black leading-normal!;
     font-family: var(--font-generalsans);
   }
 
