@@ -9,18 +9,16 @@ const Target = (props: JSX.IntrinsicElements['mesh']) => {
   const targetRef = useRef<THREE.Mesh>(null);
   const { scene } = useGLTF('/models/laravel.glb');
 
-    useGSAP(() => {
-      gsap.to(targetRef.current.position, {
-        y: targetRef.current.position.y +0.5,
-        duration: 1.5,
-        repeat: -1,
-        yoyo: true,
-      });
-    })
+  useGSAP(() => {
+    if (!targetRef.current) return;
 
-    useGSAP(() => {
-  if (!targetRef.current) return;
-});
+    gsap.to(targetRef.current.position, {
+      y: targetRef.current.position.y + 0.5,
+      duration: 1.5,
+      repeat: -1,
+      yoyo: true,
+    });
+  });
 
   return (
     <mesh ref={targetRef} {...props}>
