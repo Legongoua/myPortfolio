@@ -41,7 +41,7 @@ type DemoComputerProps = JSX.IntrinsicElements['group'] & {
 const DemoComputer = ({ texture, ...props }: DemoComputerProps) => {
   const group = useRef<THREE.Group>(null);
   const { nodes, materials, animations } = useGLTF('/models/computer.glb') as unknown as GLTFResult;
-  const { actions } = useAnimations(animations, group);
+  const { actions: _actions } = useAnimations(animations, group);
 
   const txt = useVideoTexture(texture ? texture : '/textures/project/project1.mp4');
 

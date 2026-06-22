@@ -1,4 +1,4 @@
-import { useState } from "react";
+// import { useState } from "react";
 // import { Suspense } from "react";
 // import { Canvas } from "@react-three/fiber";
 // import { OrbitControls } from "@react-three/drei";
@@ -6,10 +6,10 @@ import { useState } from "react";
 // import CanvasLoader from "../components/Loading";
 import { workExperiences } from "../constants/index";
 
-type AnimationName = "idle" | "salute" | "clapping" | "victory";
+// type AnimationName = "idle" | "salute" | "clapping" | "victory";
 
 const WorkExperience = () => {
-  const [animationName, setAnimationName] = useState<AnimationName>("idle");
+  // const [animationName, setAnimationName] = useState<AnimationName>("idle");
 
   return (
     <section className="c-space my-20" id="work">
@@ -42,9 +42,9 @@ const WorkExperience = () => {
               {workExperiences.map((item, index) => (
                 <div
                   key={index}
-                  onClick={() => setAnimationName(item.animation.toLowerCase() as AnimationName)}
-                  onPointerOver={() => setAnimationName(item.animation.toLowerCase() as AnimationName)}
-                  onPointerOut={() => setAnimationName("idle")}
+                  // onClick={() => setAnimationName(item.animation.toLowerCase() as AnimationName)}
+                  // onPointerOver={() => setAnimationName(item.animation.toLowerCase() as AnimationName)}
+                  // onPointerOut={() => setAnimationName("idle")}
                   className="work-content_container group">
                   <div className="flex flex-col h-full justify-start items-center py-2">
                     <div className="work-content_logo">

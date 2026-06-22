@@ -7,9 +7,23 @@ Title: JavaScript Logo – 3D Model
 */
 
 import { Float, useGLTF } from "@react-three/drei";
+import type { JSX } from 'react';
+import * as THREE from 'three';
+import type { GLTF } from 'three-stdlib';
 
-const JavascriptLogo = (props) => {
-  const { nodes, materials } = useGLTF("models/javascript_logo__3d_model.glb");
+type GLTFResult = GLTF & {
+  nodes: {
+    Object_4: THREE.Mesh;
+    Object_5: THREE.Mesh;
+  };
+  materials: {
+    yellow: THREE.MeshStandardMaterial;
+    black: THREE.MeshStandardMaterial;
+  };
+};
+
+const JavascriptLogo = (props: JSX.IntrinsicElements['group']) => {
+  const { nodes, materials } = useGLTF("models/javascript_logo__3d_model.glb") as unknown as GLTFResult;
   return (
     <Float floatIntensity={1}>
       <group position={[8, 8, 0]} scale={0.01} {...props} dispose={null}>

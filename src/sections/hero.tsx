@@ -9,7 +9,7 @@ import Target from "../components/Target";
 // import { Leva, useControls } from "leva";
 import JavascriptLogo from "../components/jsLogo";
 import Cube from "../components/Cube";
-import Rings from "../components/Ring";
+// import Rings from "../components/Ring";
 import HeroCamera from "../components/HeroCamera";
 import Button from "../components/Button";
 

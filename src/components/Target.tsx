@@ -18,6 +18,10 @@ const Target = (props: JSX.IntrinsicElements['mesh']) => {
       });
     })
 
+    useGSAP(() => {
+  if (!targetRef.current) return;
+});
+
   return (
     <mesh ref={targetRef} {...props}>
       <primitive object={scene} />

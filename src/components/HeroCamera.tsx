@@ -1,5 +1,4 @@
 import { useRef } from 'react';
-import type { JSX } from 'react';
 import { useFrame } from '@react-three/fiber';
 import { easing } from 'maath';
 import * as THREE from 'three';

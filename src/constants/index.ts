@@ -1,3 +1,11 @@
+type ClientReview = {
+  id: number;
+  review: string;
+  img: string;
+  name: string;
+  position: string;
+};
+
 export const navLinks = [
   {
     id: 1,
@@ -22,7 +30,7 @@ export const navLinks = [
   
 ];
 
-export const clientReviews = [
+export const clientReviews: ClientReview[] = [
   // {
   //   id: 1,
   //   name: 'Emily Johnson',
