@@ -98,7 +98,7 @@ export const myProjects = [
       {
         id: 4,
         name: "Next.js",
-        path: "/assets/next.svg",
+        path: "/assets/nextjs.svg",
       },
     ],
   },
