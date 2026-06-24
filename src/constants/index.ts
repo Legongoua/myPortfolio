@@ -9,25 +9,24 @@ type ClientReview = {
 export const navLinks = [
   {
     id: 1,
-    name: 'Accueil',
-    href: '#home',
+    name: "Accueil",
+    href: "#home",
   },
   {
     id: 2,
-    name: 'À propos',
-    href: '#about',
+    name: "À propos",
+    href: "#about",
   },
   {
     id: 3,
-    name: 'Projets',
-    href: '#work',
+    name: "Projets",
+    href: "#work",
   },
   {
     id: 4,
-    name: 'Contact',
-    href: '#contact',
+    name: "Contact",
+    href: "#contact",
   },
-  
 ];
 
 export const clientReviews: ClientReview[] = [
@@ -67,40 +66,40 @@ export const clientReviews: ClientReview[] = [
 
 export const myProjects = [
   {
-    title: 'Gorge Movie',
-    desc: 'Site web pour voir les annonces de differents films',
+    title: "Gorge Movie",
+    desc: "Site web pour voir les annonces de differents films",
     subdesc:
-      'Built as a unique Software-as-a-Service app with Next.js 14, Tailwind CSS, TypeScript, Nest.js , Gorge Movie is designed for optimal performance and scalability.',
-    href: 'https://www.youtube.com/watch?v=zfAb95tJvZQ',
-    texture: '/textures/project/project1.mp4',
-    logo: '/assets/project-logo1.png',
+      "Conçu comme un site web unique avec Next.js, Tailwind CSS, Nest.js et MongoDB, Gorge Movie est optimisé pour offrir des performances et une évolutivité maximales.",
+    href: "https://gorge-movie.vercel.app",
+    texture: "/textures/project/gorgeMovie.mp4",
+    logo: "/assets/gorgeLogo.png",
     logoStyle: {
-      backgroundColor: '#2A1816',
-      border: '0.2px solid #36201D',
-      boxShadow: '0px 0px 60px 0px #AA3C304D',
+      backgroundColor: "#0F1A24", // Un bleu nuit très sombre et profond
+      border: "0.2px solid #182A3A", // Une bordure légèrement plus claire pour détacher le logo
+      boxShadow: "0px 0px 60px 0px rgba(30, 144, 255, 0.3)",
     },
-    spotlight: '/assets/spotlight1.png',
+    spotlight: "/assets/spotlight2.png",
     tags: [
       {
         id: 1,
-        name: 'React.js',
-        path: '/assets/react.svg',
+        name: "Nest.js",
+        path: "/assets/nestjs.svg",
       },
       {
         id: 2,
-        name: 'TailwindCSS',
-        path: 'assets/tailwindcss.png',
+        name: "TailwindCSS",
+        path: "assets/tailwindcss.png",
       },
       {
         id: 3,
-        name: 'TypeScript',
-        path: '/assets/typescript.png',
+        name: "MongoDB",
+        path: "/assets/mongoDB.png",
       },
-      // {
-      //   id: 4,
-      //   name: 'Framer Motion',
-      //   path: '/assets/framer.png',
-      // },
+      {
+        id: 4,
+        name: "Next.js",
+        path: "/assets/next.svg",
+      },
     ],
   },
   // {
@@ -255,26 +254,54 @@ export const myProjects = [
   // },
 ];
 
-export const calculateSizes = (isSmall: boolean, isMobile: boolean, isTablet: boolean) => {
+export const calculateSizes = (
+  isSmall: boolean,
+  isMobile: boolean,
+  isTablet: boolean,
+) => {
   return {
     deskScale: isSmall ? 0.05 : isMobile ? 0.06 : 0.065,
     deskPosition: isMobile ? [0.5, -4.5, 0] : [0.25, -5.5, 0],
-    cubePosition: isSmall ? [4, -5, 0] : isMobile ? [6, -5, 0] : isTablet ? [7, -5, 0] : [9, -5.5, 0],
-    reactLogoPosition: isSmall ? [3, 4, 0] : isMobile ? [5, 4, 0] : isTablet ? [5, 4, 0] : [12, 3, 0],
-    ringPosition: isSmall ? [-5, 7, 0] : isMobile ? [-36, 18, 0] : isTablet ? [-42, 14, 0] : [-45, 12, 0],
-    targetPosition: isSmall ? [-5, -10, -10] : isMobile ? [-4, -10, -10] : isTablet ? [-9, -7, -10] : [-13, -13, -10],
+    cubePosition: isSmall
+      ? [4, -5, 0]
+      : isMobile
+        ? [6, -5, 0]
+        : isTablet
+          ? [7, -5, 0]
+          : [9, -5.5, 0],
+    reactLogoPosition: isSmall
+      ? [3, 4, 0]
+      : isMobile
+        ? [5, 4, 0]
+        : isTablet
+          ? [5, 4, 0]
+          : [12, 3, 0],
+    ringPosition: isSmall
+      ? [-5, 7, 0]
+      : isMobile
+        ? [-36, 18, 0]
+        : isTablet
+          ? [-42, 14, 0]
+          : [-45, 12, 0],
+    targetPosition: isSmall
+      ? [-5, -10, -10]
+      : isMobile
+        ? [-4, -10, -10]
+        : isTablet
+          ? [-9, -7, -10]
+          : [-13, -13, -10],
   };
 };
 
 export const workExperiences = [
   {
     id: 1,
-    name: 'Canopee',
-    pos: 'Developeur Backend',
-    duration: '2026 - Present',
+    name: "Canopee",
+    pos: "Developeur Backend",
+    duration: "2026 - Present",
     title: "Canopee est une application de gestion",
-    icon: '/assets/framer.svg',
-    animation: 'victory',
+    icon: "/assets/framer.svg",
+    animation: "victory",
   },
   // {
   //   id: 2,
